@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./css/index.css'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="sicons">
+                <a href=""><img src="./icons/facebook.svg" alt=""></a>
+                <a href=""><img src="./icons/instagram.svg" alt=""></a>
+                <a href=""><img src="./icons/google.svg" alt=""></a>
+                <a href=""><img src="./icons/twitter.svg" alt=""></a>
+            </div>
+            <div class="email">
+                E-mail:xyz@gmail.com
+            </div>
+        </div>
+
+        <nav>
+            <div class="logo">MegaLab</div>
+            <div class="menu">
+                <a href="" class="nav-item">Home</a>
+                <a href="" class="nav-item">About</a>
+                <a href="" class="nav-item">Portfolio</a>
+                <a href="" class="nav-item">Gallery</a>
+                <a href="" class="nav-item">Our works</a>
+                <a href="" class="nav-item">Register</a>
+                <a href="" class="nav-item">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="left">
+                <h1>We provide Best Quality <span>Designs</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi quis dolorum magni modi animi ad.Culpa vitae magnam maiores dolorum </p>
+                <button id="read">Read more</button>
+                <button id="contact">Contact us</button>
+            </div>
+            <div class="right">
+                <img src="./images/cupcake.png" >
+
+            </div>
+        </div>
+    </header>
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        navMenu.style.display="flex";
+    }
+    const navLink = document.querySelectorAll(".nav-item");
+
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+</script>
+</html>

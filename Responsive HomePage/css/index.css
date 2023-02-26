@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgba(253,121,168,0.4) 70%, white 30%);
+}
+
+.topnav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+}
+.topnav .sicons a:first-child{
+    background: #e84393;
+    color: white;
+    padding: 0 0.2rem;
+    border-radius: 5px;
+
+}
+.topnav .sicons a{
+    padding: 0 0.1rem;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 0.25rem;
+}
+.topnav .sicons a:hover{
+    background: #e84393;
+    color: white;
+    border-radius: 5px;
+    padding:0 0.2rem;
+    border-radius: 5px;
+    margin: 0 0.25rem;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+}
+nav .logo{
+    margin-left: 3rem;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+nav .menu a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+nav .menu a:first-child{
+    background: #e84393;
+    color: white;
+}
+
+nav .menu a:hover{
+    background: #e84393;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.right img{
+    height: 29rem;
+    width: 23rem;
+    object-fit:fill;
+}
+
+.left{
+    flex-basis: 50%;
+}
+.right{
+    flex-basis: 50%;
+    text-align: right;
+}
+.container .left h1{
+    font-size: 4rem;
+    /* font-weight: bold;  heading par nahi kaam karta*/
+}
+.container .left h1 span{
+    background: #e84393;
+    border-radius: 5px;
+    padding: 0.1rem 0.25rem;
+    color: white;
+}
+.container .left p{
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+.container .left button{
+    background: #e84393;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.1rem;
+    outline: none;
+}
+
+.container .left #contact{
+    background: transparent;
+    color: black;
+    border: 1px solid #e84393;
+}
+.container .left #contact:hover{
+    color: #e84393;
+    background: white;
+
+}
+.container .left #read:hover{
+    color: #e84393;
+    background: white;
+
+}
+
+/* **********responsiveness************** */
+.hamburger{
+    color: black;
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+    .email{
+    color: #101010;
+    }
+@media only screen and (max-width: 960px) {
+    .menu{
+        position: fixed;
+        left: -100%;
+        top: 0rem;
+        padding: 0 3rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .menu.active {
+        left: 0;
+    }
+    .topnav{
+        display: none;
+    }
+    .container .left >h1{
+        font-size: 40px;
+    }
+    .container .left{
+        margin-right: 2rem;
+    }
+
+    .nav-item:nth-child(1) {
+        margin-Top: 3rem;
+    }
+    .nav-item{
+        margin: 0.1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger :hover{
+        background-color: blue;
+        color: blue;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+@media only screen and (max-width:830px){
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container img{
+        display: none;
+    }
+    .container .left{
+        flex: none;
+    }
+    nav .menu a{
+        font-size: 10px;
+    }
+    nav .logo{
+        font-size: 20px;
+    }
+}
